@@ -1,10 +1,10 @@
-
 # yeah, the library is called "v" .... 
-%define name	v
-%define version	1.90
-%define release	%mkrel 3
-%define major	1.90
-%define libname	%mklibname %{name} %{major}
+%define name		v
+%define version		1.90
+%define release		%mkrel 4
+%define major		1.90
+%define libname		%mklibname %{name} %{major}
+%define develname	%mklibname %{name} -d
 
 Name:		%{name}
 Version:	%{version}
@@ -36,13 +36,15 @@ commercial, shareware, or freeware. V is available for X Athena,
 X Motif/Lesstif, all Windows platforms, and now including OS/2.
 
 
-%package -n %{libname}-devel
+%package -n %{develname}
 Summary:        Development header files for %{name}
 Group:          Development/C++
 Requires:       %{libname} = %{version}
 Provides:       lib%{name}-devel = %{version}-%{release}
+Provides:       %{name}-devel = %{version}-%{release}
+Obsoletes:	%{mklibname v 1.90 -d}
 
-%description -n %{libname}-devel
+%description -n %{develname}
 Libraries, include files and other resources you can use to develop
 %{name} applications.
 
@@ -95,7 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc Readme copying.lib
 %{_libdir}/*.so.*
 
-%files -n %{libname}-devel
+%files -n %{develname}
 %defattr (-,root,root,755)
 %doc ../help/vrefman/*
 %{_includedir}/%{name}
