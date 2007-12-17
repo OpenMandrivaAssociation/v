@@ -15,7 +15,6 @@ Group:		Development/C++
 Source0:	%{name}-%{version}.tar.bz2
 Patch0:		v-gcc41.patch.bz2
 URL:		http://www.objectcentral.com/
-BuildRoot:	%{_tmppath}/%{name}-root
 BuildRequires:	lesstif-devel, X11-devel
 
 %description
