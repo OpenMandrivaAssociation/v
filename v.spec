@@ -9,7 +9,7 @@
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-Summary:	V is a free, multiple platform C++ graphical user interface framework
+Summary:	Free, multiple platform C++ graphical user interface framework
 License:	LGPL
 Group:		Development/C++
 Source0:	%{name}-%{version}.tar.bz2
