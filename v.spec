@@ -85,9 +85,13 @@ cp -r includex/* $RPM_BUILD_ROOT%{_includedir}
 perl -pi -e "s|\r\n|\n|" $RPM_BUILD_ROOT%{_includedir}/v/*
 perl -pi -e "s|\r\n|\n|"  ../help/vrefman/* Readme copying.lib
 
+%if %mdkversion < 200900
 %post -n %{libname} -p /sbin/ldconfig
+%endif
 
+%if %mdkversion < 200900
 %postun -n %{libname} -p /sbin/ldconfig
+%endif
 
 %clean
 rm -rf $RPM_BUILD_ROOT
