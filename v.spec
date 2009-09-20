@@ -1,7 +1,7 @@
 # yeah, the library is called "v" .... 
 %define name		v
 %define version		1.90
-%define release		%mkrel 8
+%define release		%mkrel 9
 %define major		1.90
 %define libname		%mklibname %{name} %{major}
 %define develname	%mklibname %{name} -d
