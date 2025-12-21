@@ -16,6 +16,7 @@ Source0:	%{name}-%{version}.tar.bz2
 Patch0:		v-gcc41.patch.bz2
 URL:		https://www.objectcentral.com/
 BuildRoot:	%{_tmppath}/%{name}-root
+BuildRequires:	make
 BuildRequires:	lesstif-devel, X11-devel
 
 %description
